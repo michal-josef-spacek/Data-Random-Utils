@@ -21,11 +21,18 @@ sub item_from_list {
 }
 
 sub uniq_item_from_list {
-	my ($input_ar, $output_ar) = @_;
+	my ($input_ar, $output_ar, $cb) = @_;
+
+	if (! $cb) {
+		$cb = sub {
+			my ($a, $b) = @_;
+			return $a eq $b;
+		};
+	}
 
 	my ($index, $item);
 	while (! defined $index
-		|| (any { $item eq $_ } @{$output_ar})) {
+		|| (any { $cb->($item, $_) } @{$output_ar})) {
 
 		$index = int(rand(scalar @{$input_ar}));
 		$item = $input_ar->[$index];
