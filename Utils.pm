@@ -7,9 +7,18 @@ use warnings;
 use List::Util 1.33 qw(any);
 use Readonly;
 
-Readonly::Array our @EXPORT_OK => qw(uniq_item_from_list);
+Readonly::Array our @EXPORT_OK => qw(item_from_list uniq_item_from_list);
 
 our $VERSION = 0.01;
+
+sub item_from_list {
+	my ($input_ar, $output_ar) = @_;
+
+	my $index = int(rand(scalar @{$input_ar}));
+	push @{$output_ar}, $input_ar->[$index];
+
+	return;
+}
 
 sub uniq_item_from_list {
 	my ($input_ar, $output_ar) = @_;

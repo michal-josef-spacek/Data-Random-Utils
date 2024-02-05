@@ -24,6 +24,7 @@ requires 'Readonly' => 0;
 resources 'bugtracker' => 'https://github.com/michal-josef-spacek/Data-Random-Utils/issues';
 resources 'homepage' => 'https://github.com/michal-josef-spacek/Data-Random-Utils';
 resources 'repository' => 'git://github.com/michal-josef-spacek/Data-Random-Utils';
+test_requires 'List::Util' => 1.45;
 test_requires 'Test::More' => 0;
 test_requires 'Test::NoWarnings' => 0;
 tests_recursive;
