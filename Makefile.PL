@@ -18,6 +18,7 @@ name 'Data-Random-Utils';
 perl_version 5.008;
 readme_from 'Utils.pm';
 recursive_author_tests('xt');
+requires 'DateTime' => 0;
 requires 'Exporter' => 0;
 requires 'List::Util' => 1.33;
 requires 'Readonly' => 0;

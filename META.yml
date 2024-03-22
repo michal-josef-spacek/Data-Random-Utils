@@ -23,6 +23,7 @@ no_index:
     - t
     - xt
 requires:
+  DateTime: 0
   Exporter: 0
   List::Util: 1.33
   Readonly: 0

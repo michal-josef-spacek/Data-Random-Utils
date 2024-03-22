@@ -18,8 +18,9 @@ META.yml
 README
 t/Data-Random-Utils/01-use.t
 t/Data-Random-Utils/02-version.t
-t/Data-Random-Utils/03-item_from_list.t
-t/Data-Random-Utils/04-uniq_item_from_list.t
+t/Data-Random-Utils/03-is_valid.t
+t/Data-Random-Utils/04-item_from_list.t
+t/Data-Random-Utils/05-uniq_item_from_list.t
 Utils.pm
 xt/Data-Random-Utils/01-pod_coverage.t
 xt/Data-Random-Utils/02-pod.t
