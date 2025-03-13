@@ -4,6 +4,7 @@ TODO
 3. Version with comparison callback.
 See Data::Random::Calendar::Month::Color
 4. is_valid() to Data::Utils::Valid?
+Where is used?
 5.
 
 Applied
