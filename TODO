@@ -3,7 +3,7 @@ TODO
 2. Add doc.
 3. Version with comparison callback.
 See Data::Random::Calendar::Month::Color
-4. is_valid() to Data::Utils::Valid?
+4. is_object_currently_valid() to Data::Utils::Valid?
 Where is used?
 5.
 

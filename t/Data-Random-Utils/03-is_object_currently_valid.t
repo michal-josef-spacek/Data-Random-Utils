@@ -1,7 +1,7 @@
 use strict;
 use warnings;
 
-use Data::Random::Utils qw(is_valid);
+use Data::Random::Utils qw(is_object_currently_valid);
 use DateTime;
 use Test::MockObject;
 use Test::More 'tests' => 5;
@@ -17,7 +17,7 @@ $obj->mock('valid_from', sub {
 	);
 });
 $obj->mock('valid_to', sub { return; });
-my $ret = is_valid($obj);
+my $ret = is_object_currently_valid($obj);
 is($ret, 1, 'Is valid? (valid_from is time before my, valid_to undef).');
 
 # Test.
@@ -30,7 +30,7 @@ $obj->mock('valid_from', sub {
 	);
 });
 $obj->mock('valid_to', sub { return; });
-$ret = is_valid($obj);
+$ret = is_object_currently_valid($obj);
 is($ret, 0, 'Is valid? (valid_from is time after my, valid_to undef).');
 
 # Test.
@@ -49,7 +49,7 @@ $obj->mock('valid_to', sub {
 		'year' => 2024,
 	);
 });
-$ret = is_valid($obj);
+$ret = is_object_currently_valid($obj);
 is($ret, 0, 'Is valid? (valid_from/valid_to are in time before my).');
 
 # Test.
@@ -64,5 +64,5 @@ $obj->mock('valid_from', sub {
 $obj->mock('valid_to', sub {
 	return DateTime->now->add(days => 1);
 });
-$ret = is_valid($obj);
+$ret = is_object_currently_valid($obj);
 is($ret, 1, 'Is valid? (valid_from is time before my and valid_to is time after my).');

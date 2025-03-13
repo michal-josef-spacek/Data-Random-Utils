@@ -8,11 +8,12 @@ use DateTime;
 use List::Util 1.33 qw(any);
 use Readonly;
 
-Readonly::Array our @EXPORT_OK => qw(is_valid item_from_list uniq_item_from_list);
+Readonly::Array our @EXPORT_OK => qw(is_object_currently_valid item_from_list
+	uniq_item_from_list);
 
 our $VERSION = 0.02;
 
-sub is_valid {
+sub is_object_currently_valid {
 	my $self = shift;
 
 	my $dt_actual = DateTime->now;
