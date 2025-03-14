@@ -7,7 +7,8 @@ See Data::Random::Calendar::Month::Color
 Where is used?
 5. How to prevent endless loop in uniq_item_from_list() ?
 6. Check $cb in uniq_item_from_list().
-7.
+7. Add to CPAN.
+8.
 
 Applied
 =======
