@@ -41,7 +41,7 @@ sub item_from_list {
 sub uniq_item_from_list {
 	my ($input_ar, $output_ar, $cb) = @_;
 
-	if (! $cb) {
+	if (! defined $cb) {
 		$cb = sub {
 			my ($a, $b) = @_;
 			return $a eq $b;
