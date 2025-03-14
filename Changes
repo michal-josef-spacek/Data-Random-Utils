@@ -1,5 +1,6 @@
 0.02
  - API change: Rename is_valid() to better is_object_currently_valid().
+ - Add tests for uniq_item_from_list().
  - Fix check of callback in uniq_item_from_list().
  - Update copyright years.
 
