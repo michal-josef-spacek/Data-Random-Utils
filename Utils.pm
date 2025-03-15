@@ -30,10 +30,14 @@ sub is_object_currently_valid {
 }
 
 sub item_from_list {
-	my ($input_ar, $output_ar) = @_;
+	my ($input_ar, $output_ref) = @_;
 
 	my $index = int(rand(scalar @{$input_ar}));
-	push @{$output_ar}, $input_ar->[$index];
+	if (ref $output_ref eq 'ARRAY') {
+		push @{$output_ref}, $input_ar->[$index];
+	} elsif (ref $output_ref eq 'SCALAR') {
+		${$output_ref} = $input_ar->[$index];
+	}
 
 	return;
 }

@@ -1,4 +1,6 @@
 0.03
+ - API changes: Change item_from_list() second argument functionality. It could
+   be scalar ref or array ref.
 
 0.02 2025-03-14T13:07:25+01:00
  - API change: Rename is_valid() to better is_object_currently_valid().

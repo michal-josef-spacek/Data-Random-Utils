@@ -3,7 +3,7 @@ use warnings;
 
 use Data::Random::Utils qw(item_from_list);
 use List::Util 1.45 qw(uniq);
-use Test::More 'tests' => 42;
+use Test::More 'tests' => 44;
 use Test::NoWarnings;
 
 # Test.
@@ -20,3 +20,10 @@ is_deeply(
 	\@uniq,
 	'All items are in output.',
 );
+
+# Test.
+@input = ('one');
+my $output;
+my $ret = item_from_list(\@input, \$output);
+is($ret, undef, 'item_from_list() returns undef.');
+is($output, 'one', 'Set right value in output scalar variable (one).');
