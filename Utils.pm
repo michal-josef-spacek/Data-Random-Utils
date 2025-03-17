@@ -5,6 +5,7 @@ use strict;
 use warnings;
 
 use DateTime;
+use Error::Pure qw(err);
 use List::Util 1.33 qw(any);
 use Readonly;
 
@@ -33,13 +34,20 @@ sub item_from_list {
 	my ($input_ar, $output_ref) = @_;
 
 	my $index = int(rand(scalar @{$input_ar}));
-	if (ref $output_ref eq 'ARRAY') {
+	my $ret;
+	if (! defined $output_ref) {
+		$ret = $input_ar->[$index];
+	} elsif (ref $output_ref eq 'ARRAY') {
 		push @{$output_ref}, $input_ar->[$index];
 	} elsif (ref $output_ref eq 'SCALAR') {
 		${$output_ref} = $input_ar->[$index];
+	} else {
+		err 'Not supported output reference.',
+			'Reference', (ref $output_ref),
+		;
 	}
 
-	return;
+	return $ret;
 }
 
 sub uniq_item_from_list {

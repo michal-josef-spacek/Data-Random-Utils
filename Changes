@@ -1,4 +1,6 @@
 0.04
+ - API change: Change item_from_list() to accept no second argument and return
+   result instead of it. Add error in case of unsupported output reference.
 
 0.03 2025-03-16T14:59:34+01:00
  - API change: Change item_from_list() second argument functionality. It
