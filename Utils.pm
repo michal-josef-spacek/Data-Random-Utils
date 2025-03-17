@@ -60,12 +60,11 @@ sub uniq_item_from_list {
 		};
 	}
 
-	my ($index, $item);
-	while (! defined $index
+	my $item;
+	while (! defined $item
 		|| (any { $cb->($item, $_) } @{$output_ar})) {
 
-		$index = int(rand(scalar @{$input_ar}));
-		$item = $input_ar->[$index];
+		$item = item_from_list($input_ar);
 	}
 	push @{$output_ar}, $item;
 
