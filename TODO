@@ -8,7 +8,9 @@ Where is used?
 5. How to prevent endless loop in uniq_item_from_list() ?
 6. Check $cb in uniq_item_from_list().
 7. Add to CPAN.
-8.
+8. Add version of item_from_list() which will remove selected item.
+It's used in Data::Random::HashType.
+9.
 
 Applied
 =======
