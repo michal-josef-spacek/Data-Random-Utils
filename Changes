@@ -1,7 +1,7 @@
 0.04
 
 0.03 2025-03-16T14:59:34+01:00
- - API changes: Change item_from_list() second argument functionality. It
+ - API change: Change item_from_list() second argument functionality. It
    could be scalar ref or array ref.
  - Fix test dependencies.
 
