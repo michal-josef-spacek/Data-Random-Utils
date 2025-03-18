@@ -1,6 +1,7 @@
-0.04
- - API change: Change item_from_list() to accept no second argument and return
-   result instead of it. Add error in case of unsupported output reference.
+0.04 2025-03-18T17:33:11+01:00
+ - API change: Change item_from_list() to accept no second argument and
+   return result instead of it. Add error in case of unsupported output
+   reference.
  - Add item_from_list_remove() method.
  - Simplify code of uniq_item_from_list().
 
