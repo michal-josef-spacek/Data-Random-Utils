@@ -12,7 +12,7 @@ use Readonly;
 Readonly::Array our @EXPORT_OK => qw(is_object_currently_valid item_from_list
 	item_from_list_remove uniq_item_from_list);
 
-our $VERSION = 0.04;
+our $VERSION = 0.05;
 
 sub is_object_currently_valid {
 	my $self = shift;
