@@ -10,7 +10,9 @@ Where is used?
 7. Add to CPAN.
 8. Add version of item_from_list() which will remove selected item.
 It's used in Data::Random::HashType.
-9.
+9. Isn't uniq_item_from_list() variation of item_from_list_remove()?
+I need users of it.
+10.
 
 Applied
 =======
