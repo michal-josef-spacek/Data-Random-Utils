@@ -1,6 +1,5 @@
 TODO
 ====
-2. Add doc.
 3. Version with comparison callback.
 See Data::Random::Calendar::Month::Color
 4. is_object_currently_valid() to Data::Utils::Valid?
@@ -18,3 +17,6 @@ Applied
 =======
 1. Get random item from list, unique.
 OK [20240122] skim
+
+2. Add doc.
+OK [20260622] skim

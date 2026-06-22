@@ -1,5 +1,9 @@
 Changes
 CONCEPT
+examples/is_object_currently_valid.pl
+examples/item_from_list.pl
+examples/item_from_list_remove.pl
+examples/uniq_item_from_list.pl
 inc/Module/Install.pm
 inc/Module/Install/AuthorRequires.pm
 inc/Module/Install/AuthorTests.pm
